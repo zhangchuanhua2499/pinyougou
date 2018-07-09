@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+  <script type="text/javascript">
+      var aee = angular.module("abc",[]);
+      aee.controller("abcd",function ($scope) {
+          $scope.add=function () {
+              $scope.user = {name:"傻叉一号"}
+          }
+      })
+
+
+
+  </script>
+</head>
+<body ng-app="abc" ng-controller="abcd" ng-init="add()" >
+{{user.name}}
+</body>
+</html>

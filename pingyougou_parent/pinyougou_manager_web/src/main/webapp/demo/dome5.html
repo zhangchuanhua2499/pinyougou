@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+        var aee=angular.module("arr",[]);
+        aee.controller("abc",function ($scope) {
+            $scope.arrList = [{name:"aaa"},{name:"bbbb"},{name:"ccc"},{name:"ddd"}]
+        })
+    </script>
+</head>
+<body ng-app="arr" ng-controller="abc">
+
+<div ng-repeat="abb in arrList">
+    {{abb.name}}
+</div>
+
+
+</body>
+</html>

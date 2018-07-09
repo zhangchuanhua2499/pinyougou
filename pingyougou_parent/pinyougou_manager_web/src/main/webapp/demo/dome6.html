@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+            var aee = angular.module("arr",[]);
+            aee.controller("abcd",function ($scope,$http) {
+                $scope.arrlist=function () {
+                    $http.get("../brand/findAll").success(function (response) {
+                        $scope.selecarr=response;
+                    })
+                }
+            })
+
+    </script>
+</head>
+<body ng-app="arr" ng-controller="abcd" ng-init="arrlist()">
+
+<div ng-repeat=" ar in selecarr">
+    {{ar.name}}
+</div>
+
+
+</body>
+</html>

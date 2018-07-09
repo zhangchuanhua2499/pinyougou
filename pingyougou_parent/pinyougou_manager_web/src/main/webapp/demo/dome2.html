@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+  <script type="text/javascript">
+      var aee = angular.module("abcd",[]);
+      aee.controller("asd",function ($scope) {
+          $scope.user={name:"傻叉一号"}
+      })
+  </script>
+</head>
+<body ng-app="abcd" ng-controller="asd">
+{{user.name}}
+</body>
+</html>

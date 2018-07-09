@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+        var aee=angular.module("arr",[]);
+        aee.controller("abc",function ($scope) {
+
+            $scope.ancd=function () {
+              $scope.c = parseInt($scope.a)+parseInt($scope.b);
+            }
+        })
+
+
+
+    </script>
+</head>
+<body ng-app="arr" ng-controller="abc">
+
+<input ng-model="a">+<input ng-model="b"><button ng-click="ancd()">等于</button><input ng-model="c">
+
+</body>
+</html>
