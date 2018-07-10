@@ -1,0 +1,1 @@
+var aee = angular.module("pinyougou",['pagination']);
