@@ -16,8 +16,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hello" target="1.5" />
       <module name="pingyougou_parent" target="1.8" />
       <module name="pinyougou_common" target="1.8" />
+      <module name="pinyougou_content_interface" target="1.8" />
+      <module name="pinyougou_content_service" target="1.8" />
       <module name="pinyougou_dao" target="1.8" />
       <module name="pinyougou_manager_web" target="1.8" />
       <module name="pinyougou_pojo" target="1.8" />

@@ -4,13 +4,15 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.pinyougou.pojo.TbBrand;
 import com.pinyougou.sellergoods.service.BrandService;
 import entity.Result;
-import entity.pageResult;
+import entity.PageResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
+
 //restController替代了Controller 和 requeseBody
 @RestController
 @RequestMapping("/brand")
@@ -19,6 +21,13 @@ public class BrandController {
 
     @Reference
     private BrandService brandService;
+
+
+
+    @RequestMapping("/findBrandList")
+    public List<Map> findBrandList(){
+        return brandService.findBrandList();
+    }
 //查询总数据
     @RequestMapping("/findAll")
     public List<TbBrand> findAll(){
@@ -26,7 +35,7 @@ public class BrandController {
     }
 //分页查询数据
     @RequestMapping("/findPage/{pageNum}/{pageSize}")
-public pageResult findPage(@PathVariable("pageNum") int pageNum,@PathVariable("pageSize") int pageSize){
+public PageResult findPage(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize){
 
      return brandService.findPage(pageNum,pageSize);
 
@@ -68,7 +77,7 @@ public TbBrand findOne(@PathVariable("id") Long id){
     }
 //根据条件查询数据
 @RequestMapping("/search/{pageNum}/{pageSize}")
-public pageResult search(@PathVariable("pageNum") int pageNum,@PathVariable("pageSize") int pageSize,@RequestBody TbBrand tbBrand) {
+public PageResult search(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize, @RequestBody TbBrand tbBrand) {
 
     return brandService.search(pageNum,pageSize,tbBrand);
 }

@@ -3,11 +3,11 @@ package entity;
 import java.io.Serializable;
 import java.util.List;
 
-public class pageResult implements Serializable {
+public class PageResult implements Serializable {
     private Long total;
     private List rows;
 
-    public pageResult(Long total, List rows) {
+    public PageResult(Long total, List rows) {
         this.total = total;
         this.rows = rows;
     }

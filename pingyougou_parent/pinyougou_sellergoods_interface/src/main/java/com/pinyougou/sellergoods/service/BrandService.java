@@ -1,15 +1,16 @@
 package com.pinyougou.sellergoods.service;
 
 import com.pinyougou.pojo.TbBrand;
-import entity.pageResult;
+import entity.PageResult;
 
 import java.util.List;
+import java.util.Map;
 
 public interface BrandService {
 
     public List<TbBrand> findAll();
 
-    pageResult findPage(int pageNum, int pageSize);
+    PageResult findPage(int pageNum, int pageSize);
 
     void add(TbBrand tbBrand);
 
@@ -19,5 +20,8 @@ public interface BrandService {
 
     void dele(Long[] ids);
 
-    pageResult search(int pageNum, int pageSize, TbBrand tbBrand);
+    PageResult search(int pageNum, int pageSize, TbBrand tbBrand);
+
+    List<Map> findBrandList();
+
 }

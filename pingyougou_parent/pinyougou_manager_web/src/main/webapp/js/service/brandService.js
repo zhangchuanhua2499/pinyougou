@@ -1,4 +1,7 @@
-aee.service("brandService", function ($http) {
+app.service("brandService", function ($http) {
+    this.findBrandList=function () {
+        return $http.get("../brand/findBrandList");
+    }
     //查询所有
     this.findAll = function () {
         return $http.get("../brand/findAll");
